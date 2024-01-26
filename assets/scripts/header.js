@@ -18,7 +18,7 @@ class Header {
     const dropdownElement = document.querySelector(".nav__links");
     const menuImageElements = document.querySelectorAll(".nav__menu img");
     const filterElement = document.querySelector(".body-filter");
-    if (window.innerWidth >= 600) {
+    if (window.screen.width >= 600) {
       dropdownElement.classList.remove("nav__links--mobile");
     }
     function resize() {
