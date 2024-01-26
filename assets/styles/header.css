@@ -1,6 +1,10 @@
 .nav {
   padding: var(--grid-margin-vertical) var(--grid-margin-horizontal);
 }
+header,
+body {
+  width: 100%;
+}
 .nav__items,
 .nav__links {
   display: flex;
