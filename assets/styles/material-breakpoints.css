@@ -1,6 +1,7 @@
 :root {
   --grid-margin-horizontal: 16px;
   --grid-columns: repeat(4, 1fr);
+  --grid-margin-vertical: 16px;
 }
 .grid {
   display: grid;

@@ -1,3 +1,6 @@
+.nav {
+  padding: var(--grid-margin-vertical) var(--grid-margin-horizontal);
+}
 .nav__items,
 .nav__links {
   display: flex;
@@ -56,4 +59,9 @@
 }
 .no-display {
   display: none;
+}
+@media screen and (min-width: 600px) {
+  .nav__link:first-child {
+    display: none;
+  }
 }

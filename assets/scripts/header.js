@@ -12,6 +12,18 @@ class Header{
             dropdownElement.classList.toggle('nav__links--mobile')
         })
     }
+    addResizeEvent(){
+        const dropdownElement = document.querySelector('.nav__links')
+        window.addEventListener('resize', function(){
+            if(this.window.innerWidth <600 && !dropdownElement.classList.contains('nav__links--mobile')){
+                dropdownElement.classList.add('nav__links--mobile')
+            }
+            else if (this.window.innerWidth >=600){
+                dropdownElement.classList.remove('nav__links--mobile')
+            }
+        });
+    }
 }
 const header = new Header()
 header.addDropdownEvent()
+header.addResizeEvent()
