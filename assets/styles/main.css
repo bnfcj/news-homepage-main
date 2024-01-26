@@ -1,0 +1,25 @@
+main {
+  margin: 0 var(--grid-margin-horizontal);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.feature-section {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.feature-section__image {
+  max-width: 100%;
+  /* flex-shrink: 1; */
+}
+.feature-section__h1 {
+  flex-grow: 1;
+  flex-basis: 300px;
+}
+.feature-section__excerpt {
+  flex-grow: 1;
+  flex-basis: 300px;
+}
+.feature-section__button {
+  flex-basis: 50%;
+}
