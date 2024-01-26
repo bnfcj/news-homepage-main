@@ -6,6 +6,10 @@
 }
 .nav__logo {
   margin-right: auto;
+  height: 44px;
+}
+.nav__menu img {
+  height: 17px;
 }
 .nav__links {
   gap: 48px;
@@ -16,14 +20,20 @@
 }
 
 /* Mobile Styles */
-.nav__links-mobile .nav__link:nth-of-type(n + 2) {
+.nav__links--mobile .nav__link:nth-of-type(n + 2) {
   display: none;
 }
-.nav__links-mobile--expanded {
+.nav__links--mobile-expanded {
   display: flex;
   flex-direction: column;
   position: fixed;
   right: 0;
   top: 0;
   bottom: 0;
+  padding-top: calc(13.5px);
+  align-items: flex-start;
+  width: 60%;
+}
+.nav__links--mobile-expanded .nav__menu {
+  align-self: flex-end;
 }
