@@ -22,20 +22,15 @@ class Header {
       dropdownElement.classList.remove("nav__links--mobile");
     }
     function resize() {
-      // dropdownElement.classList.add('nav__links--mobile')
-    dropdownElement.style.width='60%'
       dropdownElement.classList.add("nav__links--mobile");
       if (window.innerWidth >= 600) {
-        menuImageElements.forEach((element,index) =>{
-           if(index===0){
-            element.classList.remove('no-display')
-           }
-           else{
-            element.classList.add('no-display')
-           }
-
-        }
-        );
+        menuImageElements.forEach((element, index) => {
+          if (index === 0) {
+            element.classList.remove("no-display");
+          } else {
+            element.classList.add("no-display");
+          }
+        });
         filterElement.classList.remove("body-filter--active");
         dropdownElement.classList.remove("nav__links--mobile-expanded");
 
