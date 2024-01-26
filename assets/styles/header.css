@@ -33,7 +33,14 @@
   padding-top: calc(13.5px);
   align-items: flex-start;
   width: 60%;
+  background-color: var(--off-white);
 }
 .nav__links--mobile-expanded .nav__menu {
   align-self: flex-end;
+}
+.body-filter {
+  position: fixed;
+  inset: 0;
+  content: "";
+  background-color: var(--translucent);
 }
