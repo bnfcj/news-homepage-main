@@ -48,9 +48,12 @@
 .nav__links--mobile-expanded .nav__menu {
   align-self: flex-end;
 }
-.body-filter {
+.body-filter--active {
   position: fixed;
   inset: 0;
   content: "";
   background-color: var(--translucent);
+}
+.no-display {
+  display: none;
 }

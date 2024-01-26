@@ -18,21 +18,13 @@
     <link rel="stylesheet" href="./assets/styles/material-breakpoints.css" />
     <link rel="stylesheet" href="./assets/styles/header.css" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
+    <!-- Scripts -->
+    <script src="./assets/scripts/header.js" defer></script>
     <title>Frontend Mentor | News homepage</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <header>
+      <!-- body-filter--active -->
       <div class="body-filter"></div>
       <nav class="nav">
         <ul class="nav__items">
@@ -40,9 +32,14 @@
             <img src="./assets/images/logo.svg" alt="Logo of W." />
           </li>
           <!-- nav__links--mobile-expanded -->
-          <div class="nav__links nav__links--mobile-expanded">
+          <div class="nav__links nav__links--mobile">
             <li class="nav__link nav__menu">
               <img src="./assets/images/icon-menu.svg" aria-hidden="true" />
+              <img
+                class="no-display"
+                src="./assets/images/icon-menu-close.svg"
+                aria-hidden="true"
+              />
             </li>
 
             <li class="nav__link">
