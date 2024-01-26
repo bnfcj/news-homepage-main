@@ -17,14 +17,14 @@ class Header{
         if (window.innerWidth >=600){
             dropdownElement.classList.remove('nav__links--mobile')
         }
-        window.addEventListener('resize', function(){
-            if(this.window.innerWidth <600 && !dropdownElement.classList.contains('nav__links--mobile')){
-                dropdownElement.classList.add('nav__links--mobile')
-            }
-            else if (this.window.innerWidth >=600){
+        function resize(){
+            // dropdownElement.classList.add('nav__links--mobile')
+            dropdownElement.classList.add('nav__links--mobile')
+            if (window.innerWidth >=600){
                 dropdownElement.classList.remove('nav__links--mobile')
             }
-        });
+        }
+        window.addEventListener('resize', resize ,false);
         
     }
 }
