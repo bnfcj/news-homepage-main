@@ -42,7 +42,7 @@ class Header {
         dropdownElement.classList.remove("nav__links--mobile");
       }
     }
-    window.addEventListener("resize", resize, false);
+    // window.addEventListener("resize", resize, false);
   }
 }
 const header = new Header();
