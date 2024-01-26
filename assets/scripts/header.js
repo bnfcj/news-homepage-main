@@ -15,15 +15,16 @@ class Header {
     });
   }
   addResizeEvent() {
+    const width = window.screen.width;
     const dropdownElement = document.querySelector(".nav__links");
     const menuImageElements = document.querySelectorAll(".nav__menu img");
     const filterElement = document.querySelector(".body-filter");
-    if (window.screen.width >= 600) {
+    if (window.screen.width >= 600 && window.screen.width !== width) {
       dropdownElement.classList.remove("nav__links--mobile");
     }
     function resize() {
       dropdownElement.classList.add("nav__links--mobile");
-      if (window.screen.width >= 600) {
+      if (window.screen.width >= 600 && window.screen.width !== width) {
         menuImageElements.forEach((element, index) => {
           if (index === 0) {
             element.classList.remove("no-display");
