@@ -63,11 +63,18 @@
     </header>
     <main>
       <section class="feature-section">
-        <img
-          class="feature-section__image"
-          src="./assets/images/image-web-3-mobile.jpg"
-          alt="Abstract design for web 3"
-        />
+        <picture class="feature-section__image">
+          <source
+            media="(max-width: 599px)"
+            width="100%"
+            srcset="./assets/images/image-web-3-mobile.jpg"
+          />
+          <source
+            width="100%"
+            srcset="./assets/images/image-web-3-desktop.jpg"
+          />
+          <img src="./assets/images/image-web-3-mobile.jpg" alt="" />
+        </picture>
         <h1 class="feature-section__h1">The Bright Future of Web 3.0?</h1>
         <p class="feature-section__excerpt">
           We dive into the next evolution of the web that claims to put the
