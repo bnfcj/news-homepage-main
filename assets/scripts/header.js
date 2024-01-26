@@ -19,20 +19,26 @@ class Header {
       const dropdownElement = document.querySelector(".nav__links");
       const filterElement = document.querySelector(".body-filter");
       if (
-        window.screen.width >= 600 &&
+        window.innerWidth >= 600 &&
         !dropdownElement.classList.contains("nav__links--desktop")
       ) {
+        document.querySelector(".nav__open").classList.remove("no-display");
+        document.querySelector(".nav__close").classList.add("no-display");
         dropdownElement.classList.add("nav__links--desktop");
         dropdownElement.classList.remove("nav__links--mobile");
         filterElement.classList.remove("body-filter--active");
         dropdownElement.classList.remove("nav__links--mobile-expanded");
-      } else if (
-        window.screen.width < 600 &&
+      }
+      if (
+        window.innerWidth < 600 &&
         !dropdownElement.classList.contains("nav__links--mobile")
       ) {
         console.log("yo");
         dropdownElement.classList.add("nav__links--mobile");
         dropdownElement.classList.remove("nav__links--desktop");
+      }
+      if (dropdownElement.classList.contains("nav__links--mobile-expanded")) {
+        dropdownElement.classList.remove("nav__links--mobile");
       }
     }
     window.addEventListener("resize", resize, false);

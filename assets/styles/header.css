@@ -3,7 +3,7 @@
 }
 
 .nav__items,
-.nav__links--mobile {
+.nav__links--mobile--expanded {
   display: flex;
   align-items: center;
   list-style: none;
@@ -19,7 +19,7 @@
 .nav__menu img {
   height: 17px;
 }
-.nav__links--mobile {
+.nav__links--mobile-expanded {
   gap: 48px;
 }
 .nav__link a {
@@ -35,12 +35,15 @@
 /* Mobile Styles */
 
 .nav__links--mobile .nav__link:nth-of-type(n + 2) {
-  position: absolute !important; /* Outside the DOM flow */
+  display: none;
+  /* position: absolute !important;
   height: 1px;
-  width: 1px; /* Nearly collapsed */
+  width: 1px;
   overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE 7+ only support clip without commas */
-  clip: rect(1px, 1px, 1px, 1px); /* All other browsers */
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px); */
+}
+.nav__links--mobile {
 }
 .nav__links--mobile-expanded {
   display: flex;
