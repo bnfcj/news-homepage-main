@@ -3,10 +3,14 @@
   display: flex;
   align-items: center;
   list-style: none;
+  padding: 0;
 }
 .nav__logo {
   margin-right: auto;
   height: 44px;
+}
+.nav__menu {
+  cursor: pointer;
 }
 .nav__menu img {
   height: 17px;
@@ -21,7 +25,12 @@
 
 /* Mobile Styles */
 .nav__links--mobile .nav__link:nth-of-type(n + 2) {
-  display: none;
+  position: absolute !important; /* Outside the DOM flow */
+  height: 1px;
+  width: 1px; /* Nearly collapsed */
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE 7+ only support clip without commas */
+  clip: rect(1px, 1px, 1px, 1px); /* All other browsers */
 }
 .nav__links--mobile-expanded {
   display: flex;
@@ -30,7 +39,8 @@
   right: 0;
   top: 0;
   bottom: 0;
-  padding-top: calc(13.5px);
+  padding: calc(13.5px) var(--grid-margin-horizontal);
+
   align-items: flex-start;
   width: 60%;
   background-color: var(--off-white);
