@@ -23,7 +23,7 @@ class Header {
     }
     function resize() {
       dropdownElement.classList.add("nav__links--mobile");
-      if (window.innerWidth >= 600) {
+      if (window.screen.width >= 600) {
         menuImageElements.forEach((element, index) => {
           if (index === 0) {
             element.classList.remove("no-display");
