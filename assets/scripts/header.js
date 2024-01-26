@@ -15,30 +15,28 @@ class Header {
     });
   }
   addResizeEvent() {
-    const width = window.screen.width;
-    const dropdownElement = document.querySelector(".nav__links");
-    const menuImageElements = document.querySelectorAll(".nav__menu img");
-    const filterElement = document.querySelector(".body-filter");
-    if (window.screen.width >= 600 && window.screen.width !== width) {
-      dropdownElement.classList.remove("nav__links--mobile");
-    }
     function resize() {
-      dropdownElement.classList.add("nav__links--mobile");
-      if (window.screen.width >= 600 && window.screen.width !== width) {
-        menuImageElements.forEach((element, index) => {
-          if (index === 0) {
-            element.classList.remove("no-display");
-          } else {
-            element.classList.add("no-display");
-          }
-        });
+      const dropdownElement = document.querySelector(".nav__links");
+      const filterElement = document.querySelector(".body-filter");
+      if (
+        window.screen.width >= 600 &&
+        !dropdownElement.classList.contains("nav__links--desktop")
+      ) {
+        dropdownElement.classList.add("nav__links--desktop");
+        dropdownElement.classList.remove("nav__links--mobile");
         filterElement.classList.remove("body-filter--active");
         dropdownElement.classList.remove("nav__links--mobile-expanded");
-
-        dropdownElement.classList.remove("nav__links--mobile");
+      } else if (
+        window.screen.width < 600 &&
+        !dropdownElement.classList.contains("nav__links--mobile")
+      ) {
+        console.log("yo");
+        dropdownElement.classList.add("nav__links--mobile");
+        dropdownElement.classList.remove("nav__links--desktop");
       }
     }
     window.addEventListener("resize", resize, false);
+    resize();
   }
 }
 const header = new Header();
