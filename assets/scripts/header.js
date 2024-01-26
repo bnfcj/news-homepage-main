@@ -23,7 +23,7 @@ class Header {
     }
     function resize() {
       // dropdownElement.classList.add('nav__links--mobile')
-
+    dropdownElement.style.width='60%'
       dropdownElement.classList.add("nav__links--mobile");
       if (window.innerWidth >= 600) {
         menuImageElements.forEach((element,index) =>{
@@ -42,7 +42,7 @@ class Header {
         dropdownElement.classList.remove("nav__links--mobile");
       }
     }
-    // window.addEventListener("resize", resize, false);
+    window.addEventListener("resize", resize, false);
   }
 }
 const header = new Header();
