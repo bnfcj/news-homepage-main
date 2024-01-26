@@ -1,0 +1,42 @@
+:root {
+  --grid-margin-horizontal: 16px;
+  --grid-columns: repeat(4, 1fr);
+}
+.grid {
+  display: grid;
+  margin: 0 var(--grid-margin-horizontal);
+  /* margin-right: var(--grid-margin-horizontal); */
+  grid-template-columns: var(--grid-columns);
+}
+
+* {
+  margin: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+@media screen and (min-width: 600px) and (max-width: 904px) {
+  :root {
+    --grid-margin-horizontal: 32px;
+    --grid-columns: repeat(8, 1fr);
+  }
+}
+@media screen and (min-width: 905px) and (max-width: 1239px) {
+  :root {
+    --grid-margin-horizontal: calc((100vw - 840px) / 2);
+    --grid-columns: repeat(12, 1fr);
+  }
+}
+@media screen and (min-width: 1240px) and (max-width: 1439px) {
+  :root {
+    --grid-margin-horizontal: 200px;
+    --grid-columns: repeat(12, 1fr);
+  }
+}
+@media screen and (min-width: 1440px) {
+  :root {
+    --grid-margin-horizontal: calc((100vw - 1040px) / 2);
+    --grid-columns: repeat(12, 1fr);
+  }
+}
