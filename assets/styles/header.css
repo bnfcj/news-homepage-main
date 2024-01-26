@@ -1,10 +1,7 @@
 .nav {
   padding: var(--grid-margin-vertical) var(--grid-margin-horizontal);
 }
-header,
-body {
-  width: 100%;
-}
+
 .nav__items,
 .nav__links {
   display: flex;
@@ -50,7 +47,7 @@ body {
     var(--grid-margin-horizontal);
 
   align-items: flex-start;
-  width: 60%;
+
   background-color: var(--off-white);
 }
 .nav__links--mobile-expanded .nav__menu {
