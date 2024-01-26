@@ -42,7 +42,8 @@
   right: 0;
   top: 0;
   bottom: 0;
-  padding: calc(13.5px) var(--grid-margin-horizontal);
+  padding: calc(13.5px + var(--grid-margin-vertical))
+    var(--grid-margin-horizontal);
 
   align-items: flex-start;
   width: 60%;
