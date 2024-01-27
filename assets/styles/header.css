@@ -1,7 +1,19 @@
 .nav {
   padding: var(--grid-margin-vertical) var(--grid-margin-horizontal);
 }
-
+.absolute-container {
+  height: 100vh;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  right: var(--grid-margin-horizontal);
+  padding-top: calc(var(--grid-margin-vertical) + 13.5px);
+}
+.absolute-container--expanded {
+  background-color: var(--off-white);
+  padding-right: var(--grid-margin-horizontal);
+  margin-right: calc(0px - var(--grid-margin-horizontal));
+}
 .nav__items,
 .nav__links--mobile--expanded {
   display: flex;
@@ -49,13 +61,14 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  position: fixed;
+  /* position: fixed; */
   right: 0;
   top: 0;
   bottom: 0;
   padding: calc(13.5px + var(--grid-margin-vertical))
     var(--grid-margin-horizontal);
-
+  margin-top: calc(-13.5px - var(--grid-margin-vertical));
+  margin-right: calc(0px - var(--grid-margin-horizontal));
   align-items: flex-start;
 
   background-color: var(--off-white);

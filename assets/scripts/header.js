@@ -5,12 +5,14 @@ class Header {
     const filterElement = document.querySelector(".body-filter");
     const menuImageElements = document.querySelectorAll(".nav__menu img");
     const dropdownElement = document.querySelector(".nav__links");
+    const absoluteElement = document.querySelector(".absolute-container");
     menuElement.addEventListener("click", function () {
       menuImageElements.forEach((element) =>
         element.classList.toggle("no-display")
       );
       filterElement.classList.toggle("body-filter--active");
       dropdownElement.classList.toggle("nav__links--mobile-expanded");
+      absoluteElement.classList.toggle("absolute-container--expanded");
       dropdownElement.classList.toggle("nav__links--mobile");
     });
   }
@@ -18,6 +20,7 @@ class Header {
     function resize() {
       const dropdownElement = document.querySelector(".nav__links");
       const filterElement = document.querySelector(".body-filter");
+      const absoluteElement = document.querySelector(".absolute-container");
       if (
         window.innerWidth >= 600 &&
         !dropdownElement.classList.contains("nav__links--desktop")
@@ -28,6 +31,7 @@ class Header {
         dropdownElement.classList.remove("nav__links--mobile");
         filterElement.classList.remove("body-filter--active");
         dropdownElement.classList.remove("nav__links--mobile-expanded");
+        absoluteElement.classList.remove("absolute-container--expanded");
       }
       if (
         window.innerWidth < 600 &&
