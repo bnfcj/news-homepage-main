@@ -3,7 +3,7 @@ main {
   display: grid;
 }
 .feature-section {
-  display: flex;
+  display: grid;
   gap: var(--grid-margin-vertical);
   flex-wrap: wrap;
   width: 100%;
@@ -22,10 +22,11 @@ main {
 @media screen and (min-width: 1440px) {
   main {
     column-gap: var(--grid-margin-vertical);
-    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: 1fr 1fr 1fr;
     /* align-items: ; */
   }
   .feature-section {
+    grid-column: span 2;
   }
   .feature-section__excerpt {
     margin-bottom: var(--grid-margin-vertical);
