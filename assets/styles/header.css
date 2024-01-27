@@ -35,13 +35,13 @@
 /* Mobile Styles */
 
 .nav__links--mobile .nav__link:nth-of-type(n + 2) {
-  display: none;
-  /* position: absolute !important;
+  /* display: none; */
+  position: absolute !important;
   height: 1px;
   width: 1px;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px); */
+  clip: rect(1px, 1px, 1px, 1px);
 }
 .nav__links--mobile {
 }
