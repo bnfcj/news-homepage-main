@@ -50,3 +50,19 @@ main {
     flex-basis: calc(50% - var(--grid-margin-vertical));
   }
 }
+
+/* New Article Section */
+.new-section .new-section__h2 {
+  color: var(--soft-orange);
+}
+.new-section {
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+  padding: var(--grid-gap);
+  margin-bottom: var(--grid-gap);
+}
+.new-section__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

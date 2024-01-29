@@ -7,14 +7,14 @@ header {
   top: 0;
 }
 .absolute-container {
+}
+.absolute-container--expanded {
+  padding-top: calc(var(--grid-margin-vertical) + 13.5px);
   height: 100vh;
   position: fixed;
   overflow: auto;
   top: 0;
   right: var(--grid-margin-horizontal);
-  padding-top: calc(var(--grid-margin-vertical) + 13.5px);
-}
-.absolute-container--expanded {
   background-color: var(--off-white);
   padding-right: var(--grid-margin-horizontal);
   margin-right: calc(0px - var(--grid-margin-horizontal));
