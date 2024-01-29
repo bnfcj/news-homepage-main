@@ -93,9 +93,10 @@ main {
   padding-bottom: var(--grid-margin-vertical);
 }
 .popular-section__items {
+  cursor: pointer;
   display: grid;
   gap: var(--grid-gap);
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .popular-section__items {
   list-style: none;
@@ -122,4 +123,18 @@ main {
 }
 ul {
   list-style: none;
+}
+@media screen and (max-width: 348px) {
+  .popular-section__item {
+    gap: 3px;
+  }
+  .popular-section__h2 {
+    font-size: 1.3rem;
+  }
+  .popular-section__h3 {
+    font-size: 1.1rem;
+  }
+  .popular-section__p {
+    font-size: 0.9rem;
+  }
 }
