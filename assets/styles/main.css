@@ -84,3 +84,31 @@ main {
 .new-section__item:hover .new-section__h3 {
   color: var(--soft-orange);
 }
+/* Popular Section */
+.popular-section {
+  grid-column: span 3;
+}
+.popular-section__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.popular-section__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.popular-section__item {
+  display: grid;
+  gap: calc(var(--grid-gap) * 0.5);
+  grid-template-columns: 100px 1fr;
+}
+.popular-section__image {
+  grid-row: span 3;
+  width: 100%;
+}
+.popular-section__p,
+.popular-section__h3,
+.popular-section__h2 {
+  grid-row: span 1;
+  grid-column: 2;
+}
