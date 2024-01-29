@@ -1,7 +1,12 @@
 body {
   font-family: "Inter", sans-serif;
+  background-color: var(--off-white);
+  line-height: 1.4;
 }
 h1 {
+  color: var(--very-dark-blue);
+  font-size: 2.8rem;
+  line-height: 1.2;
   margin: 0;
 }
 :root {
@@ -12,4 +17,6 @@ h1 {
   --translucent: rgba(0, 0, 0, 0.413);
   --soft-orange: hsl(35, 77%, 62%);
   --soft-red: hsl(5, 85%, 63%);
+  --text-spacing: 16px;
+  --grid-gap: 16px;
 }

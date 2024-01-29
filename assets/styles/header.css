@@ -66,17 +66,11 @@ header {
   display: flex;
   flex-direction: column;
   gap: 20px;
-
-  /* position: fixed; */
-  /* right: 0;
-  top: 0;
-  bottom: 0; */
   padding: calc(13.5px + var(--grid-margin-vertical))
     var(--grid-margin-horizontal);
   margin-top: calc(-13.5px - var(--grid-margin-vertical));
   margin-right: calc(0px - var(--grid-margin-horizontal));
   align-items: flex-start;
-
   background-color: var(--off-white);
 }
 .nav__links--mobile-expanded .nav__menu {
@@ -95,5 +89,10 @@ header {
 @media screen and (min-width: 600px) {
   .nav__link:first-child {
     display: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  :root {
+    --grid-margin-vertical: 32px;
   }
 }
